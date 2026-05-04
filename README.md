@@ -6,7 +6,7 @@ A browser-based photobooth web application that allows users to capture and cust
 
 ## Live Demo
 
-Deployed on Vercel: *(add your link here)*
+Deployed on Vercel: https://yumi-s-photobooth.vercel.app/
 
 ---
 
