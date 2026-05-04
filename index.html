@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yume Booth ♡</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sparkle" style="top:8%;left:6%;animation-delay:0s;">✦</div>
+<div class="sparkle" style="top:14%;right:8%;animation-delay:1.2s;">♡</div>
+<div class="sparkle" style="bottom:18%;left:4%;animation-delay:2.1s;">✧</div>
+<div class="sparkle" style="bottom:12%;right:6%;animation-delay:0.7s;">⭐</div>
+<div class="sparkle" style="top:40%;left:2%;animation-delay:3s;">✦</div>
+
+<!-- ══════════════════════
+     SCREEN 1 — START (REDESIGNED)
+══════════════════════ -->
+<section class="screen active" id="s1">
+
+  <!-- Sticky Nav -->
+  <nav class="s1-nav">
+    <div class="s1-nav-logo">
+      <div class="s1-nav-logomark">📸</div>
+      <div class="s1-nav-name">YUME <span>BOOTH</span></div>
+    </div>
+    <div class="s1-nav-links">
+      <div class="s1-nav-tag">✦ free to use</div>
+      <div class="s1-nav-tag">🍡 web app</div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="s1-hero">
+
+    <!-- Left: Copy -->
+    <div class="s1-hero-left">
+
+      <div class="s1-eyebrow">
+        <div class="s1-eyebrow-dot"></div>
+        <div class="s1-eyebrow-text">✦ kawaii photo studio</div>
+      </div>
+
+      <div class="s1-headline">
+        <div class="s1-headline-line1">CAPTURE YOUR</div>
+        <div class="s1-headline-line2">CUTEST MOMENTS</div>
+      </div>
+
+      <div class="s1-subhead">
+        A dreamy in-browser photo booth — pick your aesthetic, snap your shots, and save beautiful film strips. No download needed. ♡
+      </div>
+
+      <div class="s1-cta-row">
+        <button class="btn btn-primary btn-hero" onclick="go(2)">✦ start session</button>
+        <div class="s1-cta-note">🌸 no sign-up · works in browser</div>
+      </div>
+
+      <!-- Mini feature pills -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
+        <div style="background:var(--pink-soft);border:1px solid var(--pink-pale);border-radius:100px;padding:5px 12px;font-size:10px;font-weight:800;color:var(--pink-deep);">6 themes 🎨</div>
+        <div style="background:var(--lilac-pale);border:1px solid rgba(217,167,232,0.3);border-radius:100px;padding:5px 12px;font-size:10px;font-weight:800;color:#9060b8;">15+ frames 🎞️</div>
+        <div style="background:#e8f8ef;border:1px solid rgba(100,200,140,0.3);border-radius:100px;padding:5px 12px;font-size:10px;font-weight:800;color:#2a8a50;">instant download 💾</div>
+      </div>
+
+    </div>
+
+    <!-- Right: Camera -->
+    <div class="s1-hero-right">
+
+      <!-- Floating badges -->
+      <div class="cam-badge" style="top:-10px;right:-20px;animation-delay:0s;">
+        <div class="cam-badge-icon">🌸</div>
+        <div>
+          <div class="cam-badge-text">Sakura filter</div>
+          <div class="cam-badge-sub">soft pink theme</div>
+        </div>
+      </div>
+      <div class="cam-badge" style="bottom:10px;left:-30px;animation-delay:1.8s;">
+        <div class="cam-badge-icon">💾</div>
+        <div>
+          <div class="cam-badge-text">Save strip</div>
+          <div class="cam-badge-sub">as PNG file</div>
+        </div>
+      </div>
+
+      <div class="cam-illo">
+        <!-- floating decos -->
+        <div class="cam-deco" style="top:-24px;right:-4px;animation-delay:0s;font-size:22px;">💗</div>
+        <div class="cam-deco" style="top:-8px;left:-20px;animation-delay:0.8s;font-size:15px;">⭐</div>
+        <div class="cam-deco" style="bottom:-14px;right:-16px;animation-delay:1.5s;font-size:17px;">✨</div>
+        <div class="cam-deco" style="bottom:-18px;left:-4px;animation-delay:2.2s;font-size:14px;">💜</div>
+        <div class="cam-illo-body">
+          <div class="cam-screen-outer">
+            <div class="cam-screen-display">
+              <div class="cam-scanlines"></div>
+              <div class="cam-display-bunny">🐰</div>
+              <div class="cam-display-text">YUME ✦</div>
+            </div>
+          </div>
+          <div class="cam-bottom-row">
+            <div class="cam-lens-outer"></div>
+            <div class="cam-knobs">
+              <div class="cam-knob" style="width:46px;"></div>
+              <div class="cam-knob" style="width:30px;"></div>
+              <div class="cam-knob" style="width:38px;"></div>
+              <div class="cam-knob" style="width:22px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="s1-features">
+    <div class="s1-features-inner">
+
+      <div class="s1-feat">
+        <div class="s1-feat-icon" style="background:linear-gradient(135deg,#ffe0f0,#ffc8e0);">🎨</div>
+        <div class="s1-feat-title">PICK YOUR VIBE</div>
+        <div class="s1-feat-desc">Choose from 6 dreamy themes — sakura pink, classic film, moody noir, baby blue, lavender, and matcha green.</div>
+      </div>
+
+      <div class="s1-feat">
+        <div class="s1-feat-icon" style="background:linear-gradient(135deg,#e8e0ff,#d4c8ff);">📷</div>
+        <div class="s1-feat-title">SNAP YOUR SHOTS</div>
+        <div class="s1-feat-desc">Take 2–4 photos with cute filters and overlays. Pose, strike a vibe, and let the countdown do its thing ♡</div>
+      </div>
+
+      <div class="s1-feat">
+        <div class="s1-feat-icon" style="background:linear-gradient(135deg,#d0f0e0,#b8e8cc);">🎞️</div>
+        <div class="s1-feat-title">SAVE YOUR STRIP</div>
+        <div class="s1-feat-desc">Choose a cute border — film strip, gingham, cherries, daisies & more — then download your photo strip as PNG!</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="s1-footer">
+    <div>✦ made with love · yume booth ♡</div>
+    <div>ゆめ写真ブース · kawaii photo studio</div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════
+     SCREEN 2 — STRIP SELECTION (REDESIGNED)
+══════════════════════ -->
+<section class="screen" id="s2">
+
+  <!-- Nav -->
+  <div class="s2-nav">
+    <div class="s2-nav-left">
+      <button class="s2-back-btn" onclick="go(1)">← back</button>
+      <div class="s2-nav-title">✦ customize your strip</div>
+    </div>
+    <div class="s2-nav-step">
+      <div class="s2-step-dot on"></div>
+      <div class="s2-step-dot"></div>
+      <div class="s2-step-dot"></div>
+    </div>
+  </div>
+
+  <!-- 3-col layout -->
+  <div class="s2-layout">
+
+    <!-- LEFT: Theme + shots -->
+    <div class="s2-left">
+
+      <div>
+        <div class="s2-section-title">📷 shots</div>
+        <div class="count-bubbles" id="count-bubbles">
+          <button class="count-bubble active" data-n="2" onclick="pickCountBubble(this)">
+            <span class="count-bubble-num">2</span>
+            <span class="count-bubble-label">shots</span>
+          </button>
+          <button class="count-bubble" data-n="3" onclick="pickCountBubble(this)">
+            <span class="count-bubble-num">3</span>
+            <span class="count-bubble-label">shots</span>
+          </button>
+          <button class="count-bubble" data-n="4" onclick="pickCountBubble(this)">
+            <span class="count-bubble-num">4</span>
+            <span class="count-bubble-label">shots</span>
+          </button>
+          <!-- hidden compat -->
+          <div style="display:none;">
+            <button class="count-pill active" data-n="2" id="cp-2" onclick="pickCount(this)">2</button>
+            <button class="count-pill" data-n="3" id="cp-3" onclick="pickCount(this)">3</button>
+            <button class="count-pill" data-n="4" id="cp-4" onclick="pickCount(this)">4</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MIDDLE: Frame gallery -->
+    <div class="s2-middle">
+
+      <div class="s2-section-title" style="margin-bottom:0;">🎞️ choose your frame</div>
+
+      <!-- Category tabs -->
+      <div class="frame-cats" id="frame-cats">
+        <button class="frame-cat-btn active" data-cat="all">All</button>
+        <button class="frame-cat-btn" data-cat="minimal">Minimal</button>
+        <button class="frame-cat-btn" data-cat="kawaii">Kawaii</button>
+        <button class="frame-cat-btn" data-cat="dark">Dark</button>
+        <button class="frame-cat-btn" data-cat="pattern">Pattern</button>
+      </div>
+
+      <!-- Frame grid with big strip previews -->
+      <div class="frame-gallery" id="frame-list-new">
+
+        <!-- PLAIN -->
+        <div class="frame-card active" data-frame="none" data-cat="minimal" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-plain">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">plain ♡</div>
+        </div>
+
+        <!-- FILM -->
+        <div class="frame-card" data-frame="film" data-cat="dark minimal" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-film">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">film 🎞️</div>
+        </div>
+
+        <!-- POLAROID -->
+        <div class="frame-card" data-frame="polaroid" data-cat="minimal">
+          <div class="frame-strip-thumb fst-polaroid" onclick="pickFrameNew(this)">
+            <div class="fst-slot" style="margin:6px 7px 0;"></div>
+            <div class="fst-polaroid-bottom">✨</div>
+            <div class="fst-slot" style="margin:0 7px;"></div>
+            <div class="fst-polaroid-bottom">✨</div>
+            <div class="fst-slot" style="margin:0 7px;"></div>
+            <div class="fst-polaroid-bottom">✨</div>
+          </div>
+          <div class="frame-card-name">polaroid</div>
+        </div>
+
+        <!-- BOW STRIPE -->
+        <div class="frame-card" data-frame="bow" data-cat="kawaii" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-bowstripe">
+            <div class="fst-slot" style="margin:6px 7px 0;"></div>
+            <div class="fst-bowstripe-bow">🎀</div>
+            <div class="fst-slot" style="margin:0 7px;"></div>
+            <div class="fst-bowstripe-bow">🎀</div>
+            <div class="fst-slot" style="margin:0 7px;"></div>
+            <div class="fst-bowstripe-bow">🎀</div>
+          </div>
+          <div class="frame-card-name">bow 🎀</div>
+        </div>
+
+        <!-- RED LOVE (gingham) -->
+        <div class="frame-card" data-frame="gingham-r" data-cat="pattern kawaii" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-redlove">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">red love</div>
+        </div>
+
+        <!-- BLUE GINGHAM -->
+        <div class="frame-card" data-frame="gingham-b" data-cat="pattern" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-ginghamb">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">blue check</div>
+        </div>
+
+        <!-- LILAC GINGHAM -->
+        <div class="frame-card" data-frame="gingham-p" data-cat="pattern kawaii" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-ginghamp">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">lilac check</div>
+        </div>
+
+        <!-- DARK CHOCO (kawaii dark like img 2) -->
+        <div class="frame-card" data-frame="bows-pat" data-cat="dark kawaii" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-choco">
+            <div class="fst-choco-label">my love</div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-choco-label">happy days</div>
+            <div class="fst-slot"></div>
+            <div class="fst-choco-label">love 🍫</div>
+          </div>
+          <div class="frame-card-name">choco 🍫</div>
+        </div>
+
+        <!-- PINK KAWAII (like img 2 pink) -->
+        <div class="frame-card" data-frame="hearts" data-cat="kawaii" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-pinkdot">
+            <div class="fst-pinkdot-label">my love</div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-pinkdot-label">happy days</div>
+            <div class="fst-slot"></div>
+            <div class="fst-pinkdot-label">love 🎀</div>
+          </div>
+          <div class="frame-card-name">pink dots</div>
+        </div>
+
+        <!-- FILM NOIR (like img 3 left) -->
+        <div class="frame-card" data-frame="clip" data-cat="dark" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-filmnoir">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot" style="border-radius:50%;margin:2px 16px;"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-filmnoir-check"></div>
+          </div>
+          <div class="frame-card-name">film noir</div>
+        </div>
+
+        <!-- NAVY SCRAPBOOK (like img 3 middle) -->
+        <div class="frame-card" data-frame="polaroid" data-cat="dark" onclick="pickFrameNew(this)" id="navy-frame-card">
+          <div class="frame-strip-thumb fst-navy">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-navy-label">xoxo ✦ !!</div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">scrapbook</div>
+        </div>
+
+        <!-- CHERRY -->
+        <div class="frame-card" data-frame="cherry" data-cat="kawaii pattern" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-cherry">
+            <div class="fst-cherry-border"></div>
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">cherry 🍒</div>
+        </div>
+
+        <!-- DAISY -->
+        <div class="frame-card" data-frame="daisy" data-cat="kawaii pattern" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-daisy">
+            <div class="fst-daisy-border"></div>
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">daisy 🌼</div>
+        </div>
+
+        <!-- HEARTS -->
+        <div class="frame-card" data-frame="hearts" data-cat="kawaii pattern" onclick="pickFrameNew(this)" id="hearts-frame-card">
+          <div class="frame-strip-thumb fst-hearts">
+            <div class="fst-hearts-border"></div>
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">hearts 💕</div>
+        </div>
+
+        <!-- LEOPARD -->
+        <div class="frame-card" data-frame="leopard" data-cat="pattern" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-leopard">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">leopard 🐆</div>
+        </div>
+
+        <!-- LIPS -->
+        <div class="frame-card" data-frame="lips" data-cat="pattern" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-lips">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">kisses 💋</div>
+        </div>
+
+        <!-- CITRUS -->
+        <div class="frame-card" data-frame="citrus" data-cat="kawaii pattern" onclick="pickFrameNew(this)">
+          <div class="frame-strip-thumb fst-citrus">
+            <div class="fst-pad"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div><div class="fst-gap"></div>
+            <div class="fst-slot"></div>
+            <div class="fst-pad"></div>
+          </div>
+          <div class="frame-card-name">citrus 🍊</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT: Mascot + preview + go -->
+    <div class="s2-right-col">
+
+      <!-- Mascot -->
+      <div class="s2-mascot-panel">
+        <div class="s2-mascot-emoji">🐰</div>
+        <div class="s2-speech-bubble" id="mascot-msg">Pick a theme<br>that matches<br>your vibe! ♡</div>
+        <div class="s2-hearts">💗 💗 💗</div>
+      </div>
+
+      <!-- Strip preview -->
+      <div class="s2-preview-panel">
+        <div class="s2-preview-label">✦ strip preview</div>
+        <div id="strip-preview-wrap" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:60px;"></div>
+      </div>
+
+      <!-- Go button -->
+      <button class="s2-go-btn" onclick="go(3)">📷 open camera ♡</button>
+
+    </div>
+
+  </div>
+
+  <!-- Hidden old frame list for JS compat -->
+  <div style="display:none;" id="frame-list">
+    <div class="frame-chip active" data-frame="none" onclick="pickFrame(this)"><div class="frame-thumb ft-none"><div class="frame-thumb-photo"></div></div><div class="frame-label">plain</div></div>
+    <div class="frame-chip" data-frame="film" onclick="pickFrame(this)"><div class="frame-thumb ft-film"><div class="frame-thumb-photo"></div></div><div class="frame-label">film</div></div>
+    <div class="frame-chip" data-frame="polaroid" onclick="pickFrame(this)"><div class="frame-thumb ft-polaroid"><div class="frame-thumb-photo"></div></div><div class="frame-label">polaroid</div></div>
+    <div class="frame-chip" data-frame="bow" onclick="pickFrame(this)"><div class="frame-thumb ft-bow"><div class="frame-thumb-photo"></div></div><div class="frame-label">bow</div></div>
+    <div class="frame-chip" data-frame="gingham-r" onclick="pickFrame(this)"><div class="frame-thumb ft-gingham-r"><div class="frame-thumb-photo"></div></div><div class="frame-label">gingham</div></div>
+    <div class="frame-chip" data-frame="gingham-b" onclick="pickFrame(this)"><div class="frame-thumb ft-gingham-b"><div class="frame-thumb-photo"></div></div><div class="frame-label">blue check</div></div>
+    <div class="frame-chip" data-frame="gingham-p" onclick="pickFrame(this)"><div class="frame-thumb ft-gingham-p"><div class="frame-thumb-photo"></div></div><div class="frame-label">lilac check</div></div>
+    <div class="frame-chip" data-frame="bows-pat" onclick="pickFrame(this)"><div class="frame-thumb ft-bows-pat"><div class="frame-thumb-photo"></div></div><div class="frame-label">bows</div></div>
+    <div class="frame-chip" data-frame="cherry" onclick="pickFrame(this)"><div class="frame-thumb ft-cherry"><div class="frame-thumb-photo"></div></div><div class="frame-label">cherry</div></div>
+    <div class="frame-chip" data-frame="daisy" onclick="pickFrame(this)"><div class="frame-thumb ft-daisy"><div class="frame-thumb-photo"></div></div><div class="frame-label">daisy</div></div>
+    <div class="frame-chip" data-frame="leopard" onclick="pickFrame(this)"><div class="frame-thumb ft-leopard"><div class="frame-thumb-photo"></div></div><div class="frame-label">leopard</div></div>
+    <div class="frame-chip" data-frame="lips" onclick="pickFrame(this)"><div class="frame-thumb ft-lips"><div class="frame-thumb-photo"></div></div><div class="frame-label">kisses</div></div>
+    <div class="frame-chip" data-frame="citrus" onclick="pickFrame(this)"><div class="frame-thumb ft-citrus"><div class="frame-thumb-photo"></div></div><div class="frame-label">citrus</div></div>
+    <div class="frame-chip" data-frame="hearts" onclick="pickFrame(this)"><div class="frame-thumb ft-hearts"><div class="frame-thumb-photo"></div></div><div class="frame-label">hearts</div></div>
+    <div class="frame-chip" data-frame="clip" onclick="pickFrame(this)"><div class="frame-thumb ft-clip"><div class="frame-thumb-photo"></div></div><div class="frame-label">clipboard</div></div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════
+     SCREEN 3 — CAMERA
+══════════════════════ -->
+<section class="screen" id="s3">
+  <div class="top-bar">
+    <div class="logo-pill">✦ YUME BOOTH</div>
+    <div class="top-right">
+      <button class="btn btn-ghost" style="font-size:6px;padding:7px 14px;" onclick="go(2)">← strips</button>
+      <div class="heart-badge" id="cam-badge">shoot time ♡</div>
+    </div>
+  </div>
+
+  <div class="s3-body">
+
+    <!-- ── COL 1: Filters ── -->
+    <div class="s3-left">
+
+      <!-- Strip style mini-preview -->
+      <div class="s3-filter-panel" style="flex-shrink:0;flex:0 0 auto;padding:10px 10px 8px;">
+        <div class="s3-filter-panel-label">✦ selected frame</div>
+        <div id="s3-strip-preview" style="display:flex;align-items:center;justify-content:center;padding:4px 0 2px;"></div>
+      </div>
+
+      <!-- Filter panel -->
+      <div class="s3-filter-panel">
+        <div class="s3-filter-panel-label">✦ filter</div>
+        <div class="filter-strip" id="filter-strip">
+          <div class="filter-chip active" data-filter="none" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-none" data-emoji="✨"></div></div>
+            <div class="filter-label">none</div>
+          </div>
+          <div class="filter-chip" data-filter="dusk" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-dusk" data-emoji="🌊"></div></div>
+            <div class="filter-label">dusk</div>
+          </div>
+          <div class="filter-chip" data-filter="grain" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-grain" data-emoji="🎞️"></div></div>
+            <div class="filter-label">film grain</div>
+          </div>
+          <div class="filter-chip" data-filter="lofi" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-lofi" data-emoji="🕯️"></div></div>
+            <div class="filter-label">lo-fi</div>
+          </div>
+          <div class="filter-chip" data-filter="double" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-double" data-emoji="🌿"></div></div>
+            <div class="filter-label">double exp</div>
+          </div>
+          <div class="filter-chip" data-filter="y2k" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-y2k" data-emoji="💿"></div></div>
+            <div class="filter-label">y2k</div>
+          </div>
+          <div class="filter-chip" data-filter="mist" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-mist" data-emoji="🫧"></div></div>
+            <div class="filter-label">mist</div>
+          </div>
+          <div class="filter-chip" data-filter="velvet" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-velvet" data-emoji="🌹"></div></div>
+            <div class="filter-label">velvet</div>
+          </div>
+          <div class="filter-chip" data-filter="flower" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-flower" data-emoji="🌸"></div></div>
+            <div class="filter-label">floral</div>
+          </div>
+          <div class="filter-chip" data-filter="lily" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-lily" data-emoji="🌿"></div></div>
+            <div class="filter-label">lily</div>
+          </div>
+          <div class="filter-chip" data-filter="stars" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-stars" data-emoji="✦"></div></div>
+            <div class="filter-label">starfall</div>
+          </div>
+          <div class="filter-chip" data-filter="lace" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-lace" data-emoji="🕊️"></div></div>
+            <div class="filter-label">lace</div>
+          </div>
+          <div class="filter-chip" data-filter="rain" onclick="pickFilter(this)">
+            <div class="filter-preview"><div class="filter-preview-inner fp-rain" data-emoji="🌧️"></div></div>
+            <div class="filter-label">rainy day</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── COL 2: Viewfinder + Shutter ── -->
+    <div class="vf-col">
+
+      <!-- Camera viewfinder -->
+      <div class="card vf-card">
+        <div class="vf-inner-wrap">
+          <video id="vid" autoplay playsinline muted></video>
+          <canvas id="flower-overlay" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;opacity:0;transition:opacity 0.3s;border-radius:10px;"></canvas>
+          <div class="bracket tl"></div>
+          <div class="bracket tr"></div>
+          <div class="bracket bl"></div>
+          <div class="bracket br"></div>
+          <div class="vf-hud">
+            <div class="hud-pill" id="hud-pill">♡ ready</div>
+          </div>
+          <div class="flash-el" id="flash-el"></div>
+          <div class="cd-num" id="cd-num">3</div>
+          <div class="no-cam" id="no-cam">
+            <div class="no-cam-icon">📷</div>
+            <div class="no-cam-txt">camera needed ♡<br>please allow access</div>
+            <button class="btn btn-primary" style="font-size:6px;" onclick="startCam()">allow ♡</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shutter controls -->
+      <div class="card ctrl-card">
+        <div class="ctrl-row">
+          <div style="text-align:center;flex:1;">
+            <div class="shot-counter-disp">
+              shot <span class="accent" id="s-cur">1</span> of <span class="accent" id="s-tot">4</span>
+            </div>
+          </div>
+          <div class="shutter-wrap">
+            <div class="shutter-ring-outer">
+              <button class="shutter-btn" id="shutter" onclick="shoot()" disabled>📷</button>
+            </div>
+          </div>
+          <div style="text-align:center;flex:1;">
+            <div style="font-size:11px;font-weight:700;color:var(--text-soft);">3 sec<br>timer</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── COL 3: Strip result + Gallery ── -->
+    <div class="s3-right">
+
+      <!-- Your strip (photo results) -->
+      <div class="s3-result-label">✦ your strip</div>
+      <div class="card result-card" id="result-card">
+        <!-- photo slots injected by JS -->
+        <div class="save-row">
+          <button class="btn btn-primary" style="width:100%;font-size:6px;" onclick="saveStrip()">↓ save strip ♡</button>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="s3-result-label">✦ gallery</div>
+      <div class="card gallery-card" style="padding:8px;">
+        <div class="gallery-grid" id="gallery-grid">
+          <div class="gal-empty">no shots yet ♡</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<canvas id="cap" style="display:none;"></canvas>
+
+  <!-- KEEP ALL YOUR EXISTING HTML EXACTLY AS IS -->
+  <!-- just paste everything from inside <body> here -->
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
