@@ -24,19 +24,27 @@ Instant preview before capture
 Dynamic UI
 Multi-step user flow (selection → capture → output)
 Responsive layout using modern CSS techniques
+
+
 Tech Stack
 Frontend: HTML, CSS, JavaScript
 APIs: MediaDevices API (Webcam access)
 Styling: Custom CSS (Flexbox, Grid, animations)
 Deployment: Vercel
+
+
 Project Structure
 yume-booth/
 │── index.html   # Core application (UI + logic)
+
+
 Implementation Details
 Built as a single-page application with screen-based state transitions
 Uses DOM manipulation to dynamically update UI components
 Implements CSS-driven animations for interactive feedback
 Handles real-time video stream processing via browser APIs
+
+
 Future Enhancements
 Export/download functionality for photo strips
 User session storage or gallery
